@@ -9,3 +9,15 @@ services:
     - '.:/Django'
     tty: True
     stdin_open:  True
+    depends_on: 
+      - db
+  
+  db:
+    image: mysql:5.7
+    environment:                  # 4
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: django-db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    ports:
+      - 3306:3306
