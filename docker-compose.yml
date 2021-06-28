@@ -14,7 +14,7 @@ services:
   
   db:
     image: mysql:5.7
-    environment:                  # 4
+    environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: django-db
       MYSQL_USER: user
