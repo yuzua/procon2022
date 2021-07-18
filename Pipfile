@@ -10,6 +10,7 @@ djangorestframework = "*"
 django-filter = "*"
 django-environ = "*"
 pyjwt = "*"
+djangorestframework-jwt = "*"
 
 [dev-packages]
 
