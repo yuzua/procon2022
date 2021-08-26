@@ -21,8 +21,8 @@ from rest_framework_jwt.views import (obtain_jwt_token, refresh_jwt_token, verif
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', obtain_jwt_token),
+    url(r'^login/', obtain_jwt_token),
     path('token-refresh/', refresh_jwt_token),
     path('token-verify/', verify_jwt_token),
-    path('api/user/', include('user_api_app.urls')),
+    url(r'^api/user/', include('user_api_app.urls')),
 ]
