@@ -20,7 +20,7 @@ class AccountManager(BaseUserManager):
             profile = request_data['profile']
 
         user = self.model(
-            username=request_data['username'],
+            username=request_data.get['username'],
             email=self.normalize_email(request_data['email']),
             is_active=True,
             last_login=now,
